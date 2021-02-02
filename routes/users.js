@@ -9,6 +9,7 @@ let cors = require('cors')
 router.use(cors());
 const secret = 'your-prep';
 
+
 router.post('/signup',(req,res)=>{
     let first_name = req.body.first_name;
     let last_name = req.body.last_name;

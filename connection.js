@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    host:'remotemysql.com',
-    user:'zryDWUkEGt',
-    password:'cAJiVUt0ai',
-    database:'zryDWUkEGt'
+    host:'freedb.tech',
+    user:'freedbtech_yourprep',
+    password:'yourprep',
+    database:'freedbtech_yourprep'
 });
 
 db.connect((err)=>{
