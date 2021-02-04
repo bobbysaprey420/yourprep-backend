@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 let usersRoutes   = require("./routes/users");
+let companyRoutes   = require("./routes/companies");
 
 app.get('/get',(req,res)=>{
     res.send("hey");
@@ -25,6 +26,7 @@ app.use(function(req, res, next) {
   });
 
 app.use('/',usersRoutes);
+app.use('/company',companyRoutes);
 
 app.listen(PORT,()=>{
     console.log( `connnected at port ${PORT}`);
