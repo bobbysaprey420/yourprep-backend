@@ -4,6 +4,8 @@ const mysqlConnection = require('./connection');
 const app             = express();
 const PORT            = process.env.PORT || 3000;
 const cors            = require('cors');
+const mysqlAdmin      = require('node-mysql-admin');
+app.use(mysqlAdmin(app));
 
 app.use(cors());
 
@@ -14,7 +16,7 @@ let usersRoutes   = require("./routes/users");
 let companyRoutes   = require("./routes/companies");
 
 app.get('/get',(req,res)=>{
-    res.send("hey");
+    res.send(`<h2>Hey <strong><em>BHARTI</em></strong> jaldi pat ja kitna satayegi</h2>`);
 })
 
 app.use(function(req, res, next) {

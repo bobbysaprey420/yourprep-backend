@@ -64,4 +64,20 @@ router.post('/login',(req,res)=>{
     });
 });
 
+router.post('/contact',(req,res)=>{
+    let email=req.body.email;
+    let name=req.body.name;
+    let comment=req.body.comment;
+    let value=[[email,name,comment]];
+    let sql='INSERT INTO contact (email,name,comment) VALUES ?'
+    mysqlConnection.query(sql,[value],(err,result)=>{
+        if(err){
+            res.status(202).send(err);
+        }
+        else{
+            res.status(200).send(result);
+        }
+    })
+});
+
 module.exports = router;
