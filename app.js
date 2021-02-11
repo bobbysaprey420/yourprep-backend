@@ -16,7 +16,7 @@ let usersRoutes   = require("./routes/users");
 let companyRoutes   = require("./routes/companies");
 
 app.get('/get',(req,res)=>{
-    res.send(`<h2>Hey <strong><em>BHARTI</em></strong> jaldi pat ja kitna satayegi</h2>`);
+    res.send(`<h2>Hey</h2>`);
 })
 
 app.use(function(req, res, next) {
