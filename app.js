@@ -30,9 +30,6 @@ app.use(function(req, res, next) {
 
 app.use('/',usersRoutes);
 app.use('/company',companyRoutes);
-app.use('/check',(req,res)=>{
-    res.send("Hey Shraddha");
-})
 
 app.listen(PORT,()=>{
     console.log( `connnected at port ${PORT}`);
